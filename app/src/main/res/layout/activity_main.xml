@@ -48,6 +48,7 @@
             android:layout_height="@dimen/margin_xxlarge"
             android:src="@drawable/ic_sunny"
             android:layout_centerHorizontal="true"
+            style="@style/WeatherIconStyle"
             />
 
         <TextView
@@ -94,11 +95,13 @@
             android:textSize="@dimen/text_size_small"
             android:fontFamily="sans-serif"
             android:drawableLeft="@drawable/ic_wind"
+            style="@style/WeatherIconStyle"
             android:drawablePadding="@dimen/margin_xsmall"
             android:layout_below="@id/tv_wind"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/margin_small"
             />
+
 
     </RelativeLayout>
 
@@ -125,6 +128,7 @@
         app:layout_constraintBottom_toBottomOf="@id/tv_day1"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
+        style="@style/WeatherIconStyle"
         />
 
     <TextView
@@ -162,6 +166,7 @@
         app:layout_constraintBottom_toBottomOf="@id/tv_day2"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
+        style="@style/WeatherIconStyle"
         />
 
     <TextView
@@ -199,6 +204,7 @@
         app:layout_constraintBottom_toBottomOf="@id/tv_day3"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
+        style="@style/WeatherIconStyle"
         />
 
     <TextView
@@ -236,6 +242,7 @@
         app:layout_constraintBottom_toBottomOf="@id/tv_temp_day4"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
+        style="@style/WeatherIconStyle"
         />
 
     <TextView
