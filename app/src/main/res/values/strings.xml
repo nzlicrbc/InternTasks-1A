@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">InternTasks-1A</string>
+    <string name="app_name">InternTasks-1A</string>
+    <string name="temperature">14° - 27°</string>
+    <string name="date4">Cum, 05 Nisan</string>
+    <string name="date3">Per, 04 Nisan</string>
+    <string name="date2">Çarş, 03 Nisan</string>
+    <string name="date1">Sal, 02 Nisan</string>
 </resources>
