@@ -7,255 +7,236 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- TODO Design task-1 screen here -->
-    <TextView
-        android:id="@+id/tv_city"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="İstanbul"
-        android:textSize="@dimen/text_size_large"
-        android:fontFamily="sans-serif-medium"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/margin_xlarge"
-        />
 
     <TextView
-        android:id="@+id/tv_today"
+        android:id="@+id/textViewCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/city"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewToday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:text="Bugün"
+        android:text="@string/day"
         android:textSize="@dimen/text_size_small"
-        app:layout_constraintTop_toBottomOf="@id/tv_city"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewCity" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_today"
-        app:layout_constraintBottom_toTopOf="@id/icon_day1"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imageViewIconDay1"
         app:layout_constraintEnd_toEndOf="parent"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewToday">
 
         <ImageView
-            android:id="@+id/weather_icon"
+            android:id="@+id/imageViewWeatherIcon"
+            style="@style/WeatherIconStyle"
             android:layout_width="@dimen/margin_xxlarge"
             android:layout_height="@dimen/margin_xxlarge"
-            android:src="@drawable/ic_sunny"
             android:layout_centerHorizontal="true"
-            style="@style/WeatherIconStyle"
-            />
+            android:src="@drawable/ic_sunny" />
 
         <TextView
-            android:id="@+id/tv_temperature"
+            android:id="@+id/textViewTemperature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="26°"
-            android:textSize="@dimen/text_size_xlarge"
-            android:fontFamily="sans-serif"
-            android:textStyle="bold"
-            android:layout_below="@id/weather_icon"
+            android:layout_below="@id/imageViewWeatherIcon"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/margin_xlarge"
-            />
+            android:fontFamily="sans-serif"
+            android:text="@string/temperature"
+            android:textSize="@dimen/text_size_xlarge"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_weather_description"
+            android:id="@+id/textViewWeatherDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Güneşli"
-            android:textSize="@dimen/text_size_medium"
-            android:fontFamily="sans-serif-medium"
-            android:layout_below="@id/tv_temperature"
+            android:layout_below="@id/textViewTemperature"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/margin_medium"
-            />
-        <TextView
-            android:id="@+id/tv_wind"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rüzgar"
-            android:textSize="@dimen/text_size_small"
             android:fontFamily="sans-serif-medium"
-            android:layout_below="@id/tv_weather_description"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/margin_xlarge"
-            />
+            android:text="@string/weather_description"
+            android:textSize="@dimen/text_size_medium" />
 
         <TextView
-            android:id="@+id/tv_wind_speed"
+            android:id="@+id/textViewWind"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3 km/s"
-            android:textSize="@dimen/text_size_small"
-            android:fontFamily="sans-serif"
-            android:drawableLeft="@drawable/ic_wind"
+            android:layout_below="@id/textViewWeatherDescription"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/wind"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/textViewWindSpeed"
             style="@style/WeatherIconStyle"
-            android:drawablePadding="@dimen/margin_xsmall"
-            android:layout_below="@id/tv_wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewWind"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/margin_small"
-            />
+            android:drawableLeft="@drawable/ic_wind"
+            android:drawablePadding="@dimen/margin_xsmall"
+            android:fontFamily="sans-serif"
+            android:text="@string/wind_speed"
+            android:textSize="@dimen/text_size_small" />
 
 
     </RelativeLayout>
 
 
     <TextView
-        android:id="@+id/tv_day1"
+        android:id="@+id/textViewDay1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/date1"
-        android:textSize="@dimen/text_size_small"
-        android:fontFamily="sans-serif"
-        app:layout_constraintBottom_toTopOf="@+id/tv_day2"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="@dimen/margin_large"
         android:layout_marginBottom="@dimen/margin_large"
-        />
+        android:fontFamily="sans-serif"
+        android:text="@string/date1"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDay2"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/icon_day1"
+        android:id="@+id/imageViewIconDay1"
+        style="@style/WeatherIconStyle"
         android:layout_width="@dimen/margin_large"
         android:layout_height="@dimen/margin_large"
         android:src="@drawable/ic_sunny"
-        app:layout_constraintTop_toTopOf="@id/tv_day1"
-        app:layout_constraintBottom_toBottomOf="@id/tv_day1"
-        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textViewDay1"
         app:layout_constraintEnd_toStartOf="parent"
-        style="@style/WeatherIconStyle"
-        />
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewDay1" />
 
     <TextView
-        android:id="@+id/tv_temp_day1"
+        android:id="@+id/textViewTempDay1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/temperature"
-        android:textSize="@dimen/text_size_small"
-        android:fontFamily="sans-serif-medium"
-        app:layout_constraintTop_toTopOf="@id/tv_day1"
-        app:layout_constraintBottom_toBottomOf="@id/tv_day1"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="@dimen/margin_large"
-        />
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/temperature_range"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="@id/textViewDay1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewDay1" />
 
     <TextView
-        android:id="@+id/tv_day2"
+        android:id="@+id/textViewDay2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/date2"
-        android:textSize="@dimen/text_size_small"
-        android:fontFamily="sans-serif"
-        app:layout_constraintBottom_toTopOf="@+id/tv_day3"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="@dimen/margin_large"
         android:layout_marginBottom="@dimen/margin_large"
-        />
+        android:fontFamily="sans-serif"
+        android:text="@string/date2"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDay3"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/icon_day2"
+        android:id="@+id/imageViewIconDay2"
+        style="@style/WeatherIconStyle"
         android:layout_width="@dimen/margin_large"
         android:layout_height="@dimen/margin_large"
         android:src="@drawable/ic_cloudy"
-        app:layout_constraintTop_toTopOf="@id/tv_day2"
-        app:layout_constraintBottom_toBottomOf="@id/tv_day2"
-        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textViewDay2"
         app:layout_constraintEnd_toStartOf="parent"
-        style="@style/WeatherIconStyle"
-        />
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewDay2" />
 
     <TextView
-        android:id="@+id/tv_temp_day2"
+        android:id="@+id/textViewTempDay2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/temperature"
-        android:textSize="@dimen/text_size_small"
-        android:fontFamily="sans-serif-medium"
-        app:layout_constraintTop_toTopOf="@id/tv_day2"
-        app:layout_constraintBottom_toBottomOf="@id/tv_day2"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="@dimen/margin_large"
-        />
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/temperature_range"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="@id/textViewDay2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewDay2" />
 
     <TextView
-        android:id="@+id/tv_day3"
+        android:id="@+id/textViewDay3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/date3"
-        android:textSize="@dimen/text_size_small"
-        android:fontFamily="sans-serif"
-        app:layout_constraintBottom_toTopOf="@+id/tv_day4"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="@dimen/margin_large"
         android:layout_marginBottom="@dimen/margin_large"
-        />
+        android:fontFamily="sans-serif"
+        android:text="@string/date3"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDay4"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/icon_day3"
+        android:id="@+id/imageViewIconDay3"
+        style="@style/WeatherIconStyle"
         android:layout_width="@dimen/margin_large"
         android:layout_height="@dimen/margin_large"
         android:src="@drawable/ic_sunny"
-        app:layout_constraintTop_toTopOf="@id/tv_day3"
-        app:layout_constraintBottom_toBottomOf="@id/tv_day3"
-        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textViewDay3"
         app:layout_constraintEnd_toStartOf="parent"
-        style="@style/WeatherIconStyle"
-        />
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewDay3" />
 
     <TextView
-        android:id="@+id/tv_temp_day3"
+        android:id="@+id/textViewTempDay3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/temperature"
-        android:textSize="@dimen/text_size_small"
-        android:fontFamily="sans-serif-medium"
-        app:layout_constraintTop_toTopOf="@id/tv_day3"
-        app:layout_constraintBottom_toBottomOf="@id/tv_day3"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="@dimen/margin_large"
-        />
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/temperature_range"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="@id/textViewDay3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewDay3" />
 
     <TextView
-        android:id="@+id/tv_day4"
+        android:id="@+id/textViewDay4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/date4"
-        android:textSize="@dimen/text_size_small"
-        android:fontFamily="sans-serif"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="@dimen/margin_large"
         android:layout_marginBottom="@dimen/margin_xlarge"
-        />
+        android:fontFamily="sans-serif"
+        android:text="@string/date4"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/icon_day4"
+        android:id="@+id/imageViewIconDay4"
+        style="@style/WeatherIconStyle"
         android:layout_width="@dimen/margin_large"
         android:layout_height="@dimen/margin_large"
         android:src="@drawable/ic_rainy"
-        app:layout_constraintTop_toTopOf="@id/tv_temp_day4"
-        app:layout_constraintBottom_toBottomOf="@id/tv_temp_day4"
-        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textViewTempDay4"
         app:layout_constraintEnd_toStartOf="parent"
-        style="@style/WeatherIconStyle"
-        />
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewTempDay4" />
 
     <TextView
-        android:id="@+id/tv_temp_day4"
+        android:id="@+id/textViewTempDay4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/temperature"
-        android:textSize="@dimen/text_size_small"
-        android:fontFamily="sans-serif-medium"
-        app:layout_constraintTop_toTopOf="@id/tv_day4"
-        app:layout_constraintBottom_toBottomOf="@id/tv_day4"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="@dimen/margin_large"
-        />
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/temperature_range"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintBottom_toBottomOf="@id/textViewDay4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewDay4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
