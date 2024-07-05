@@ -145,7 +145,6 @@
         android:text="@string/date2"
         android:textSize="@dimen/text_size_small"
         app:layout_constraintBottom_toTopOf="@+id/textViewDay3"
-        app:layout_constraintEnd_toStartOf="@id/imageViewIconDay2"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -156,8 +155,7 @@
         android:layout_height="@dimen/margin_large"
         android:src="@drawable/ic_cloudy"
         app:layout_constraintBottom_toBottomOf="@id/textViewDay2"
-        app:layout_constraintEnd_toStartOf="@id/textViewTempDay2"
-        app:layout_constraintStart_toEndOf="@id/textViewDay2"
+        app:layout_constraintStart_toStartOf="@id/imageViewIconDay1"
         app:layout_constraintTop_toTopOf="@id/textViewDay2" />
 
     <TextView
@@ -170,7 +168,6 @@
         android:textSize="@dimen/text_size_small"
         app:layout_constraintBottom_toBottomOf="@id/textViewDay2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imageViewIconDay2"
         app:layout_constraintTop_toTopOf="@id/textViewDay2" />
 
     <TextView
@@ -183,7 +180,6 @@
         android:text="@string/date3"
         android:textSize="@dimen/text_size_small"
         app:layout_constraintBottom_toTopOf="@+id/textViewDay4"
-        app:layout_constraintEnd_toStartOf="@id/imageViewIconDay3"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -194,8 +190,7 @@
         android:layout_height="@dimen/margin_large"
         android:src="@drawable/ic_sunny"
         app:layout_constraintBottom_toBottomOf="@id/textViewDay3"
-        app:layout_constraintEnd_toStartOf="@id/textViewTempDay3"
-        app:layout_constraintStart_toEndOf="@id/textViewDay3"
+        app:layout_constraintStart_toStartOf="@id/imageViewIconDay1"
         app:layout_constraintTop_toTopOf="@id/textViewDay3" />
 
     <TextView
@@ -208,7 +203,6 @@
         android:textSize="@dimen/text_size_small"
         app:layout_constraintBottom_toBottomOf="@id/textViewDay3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imageViewIconDay3"
         app:layout_constraintTop_toTopOf="@id/textViewDay3" />
 
     <TextView
@@ -221,7 +215,6 @@
         android:text="@string/date4"
         android:textSize="@dimen/text_size_small"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/imageViewIconDay4"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -231,10 +224,9 @@
         android:layout_width="@dimen/margin_large"
         android:layout_height="@dimen/margin_large"
         android:src="@drawable/ic_rainy"
-        app:layout_constraintBottom_toBottomOf="@id/textViewTempDay4"
-        app:layout_constraintEnd_toStartOf="@id/textViewTempDay4"
-        app:layout_constraintStart_toEndOf="@id/textViewDay4"
-        app:layout_constraintTop_toTopOf="@id/textViewTempDay4" />
+        app:layout_constraintBottom_toBottomOf="@id/textViewDay4"
+        app:layout_constraintStart_toStartOf="@id/imageViewIconDay1"
+        app:layout_constraintTop_toTopOf="@id/textViewDay4" />
 
     <TextView
         android:id="@+id/textViewTempDay4"
@@ -246,7 +238,6 @@
         android:textSize="@dimen/text_size_small"
         app:layout_constraintBottom_toBottomOf="@id/textViewDay4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imageViewIconDay4"
         app:layout_constraintTop_toTopOf="@id/textViewDay4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
